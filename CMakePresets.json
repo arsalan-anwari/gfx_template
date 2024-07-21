@@ -1,0 +1,15 @@
+{
+    "version": 8,
+    "configurePresets": [
+        {
+            "name": "opengl_template",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_TOOLCHAIN_FILE": "/home/arsalan/Libraries/vcpkg/scripts/buildsystems/vcpkg.cmake",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}"
+            }
+        }
+    ]
+}
