@@ -1,15 +1,31 @@
 {
     "version": 8,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 15,
+        "patch": 0
+    },
     "configurePresets": [
         {
             "name": "opengl_template",
             "generator": "Ninja",
+            "hidden": true,
             "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release",
-                "CMAKE_TOOLCHAIN_FILE": "/home/arsalan/Libraries/vcpkg/scripts/buildsystems/vcpkg.cmake",
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}"
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}",
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
+                "CMAKE_CXX_STANDARD": "23"
+            }
+        },
+        {
+            "name": "opengl_template_release",
+            "inherits": "opengl_template",
+            "cacheVariables" : {
+                "CMAKE_BUILD_TYPE": "Release"
             }
         }
+
     ]
 }
