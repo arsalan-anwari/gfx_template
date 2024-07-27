@@ -7,7 +7,7 @@
     },
     "configurePresets": [
         {
-            "name": "opengl_template",
+            "name": "gfx_template",
             "generator": "Ninja",
             "hidden": true,
             "binaryDir": "${sourceDir}/build/${presetName}",
@@ -20,10 +20,11 @@
             }
         },
         {
-            "name": "opengl_template_release",
-            "inherits": "opengl_template",
+            "name": "opengl-window-context",
+            "inherits": "gfx_template",
             "cacheVariables" : {
-                "CMAKE_BUILD_TYPE": "Release"
+                "CMAKE_BUILD_TYPE": "Release",
+                "VCPKG_MANIFEST_FEATURES": "${presetName}"
             }
         }
 

@@ -5,3 +5,7 @@ target_sources(gfx_context
     FILE_SET CXX_MODULES FILES
         gfx_context.cppm
 )
+
+if(SETTING_OPENGL_WINDOW_CONTEXT)
+  target_link_libraries(gfx_context PUBLIC glfw GLEW::GLEW)
+endif()

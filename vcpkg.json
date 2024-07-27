@@ -1,3 +1,14 @@
 {
-  "dependencies": []
+  "name": "gfx-template-deps",
+  "version": "1.0.0",
+  "dependencies": ["fmt"],
+  "features": {
+    "opengl-window-context": {
+      "description": "OpenGL window context using GLEW and GLFW",
+      "dependencies": [
+        "glew",
+        "glfw3"
+      ]
+    }
+  }
 }
