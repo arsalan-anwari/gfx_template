@@ -1,4 +1,7 @@
-if(SETTING_OPENGL_WINDOW_CONTEXT)
-  find_package(glfw3 REQUIRED)
+find_package(fmt REQUIRED)
+
+if(SETTING_OPENGL_CUDA_CONTEXT)
   find_package(GLEW REQUIRED)
+  find_package(nvapi REQUIRED)
+  find_package(CUDAToolkit REQUIRED)
 endif()

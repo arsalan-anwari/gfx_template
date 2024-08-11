@@ -6,6 +6,12 @@
         }
     ],
     "settings": {
+        "files.associations": {
+            "xiosbase": "cpp",
+            "ios": "cpp",
+            "target": "cpp",
+            "type_traits": "cpp"
+        }
         
     }
 }

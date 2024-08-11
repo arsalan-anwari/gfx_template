@@ -11,21 +11,24 @@
             "generator": "Ninja",
             "hidden": true,
             "binaryDir": "${sourceDir}/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}",
-                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
-                "CMAKE_C_COMPILER": "clang",
-                "CMAKE_CXX_COMPILER": "clang++",
-                "CMAKE_CXX_STANDARD": "23"
-            }
+          "cacheVariables": {
+            "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}",
+            "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+            "VCPKG_TARGET_TRIPLET": "x64-windows",
+            "CMAKE_CXX_STANDARD": "23",
+            "CMAKE_CXX_EXTENSIONS": "OFF",
+            "CMAKE_C_COMPILER": "clang",
+            "CMAKE_CXX_COMPILER": "clang++"
+          }
         },
         {
-            "name": "opengl-window-context",
+            "name": "opengl-cuda-context",
             "inherits": "gfx_template",
-            "cacheVariables" : {
+            "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release",
                 "VCPKG_MANIFEST_FEATURES": "${presetName}"
-            }
+
+          }
         }
 
     ]
