@@ -1,0 +1,4 @@
+add_executable(single_window_multi_canvas single_window_multi_canvas.cpp)
+
+set_target_properties(single_window_multi_canvas PROPERTIES CXX_SCAN_FOR_MODULES true)
+target_link_libraries(single_window_multi_canvas PRIVATE types gfx_canvas gfx_window_manager)

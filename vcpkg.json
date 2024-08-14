@@ -3,15 +3,14 @@
   "version": "1.0.0",
   "dependencies": [
     "pkgconf",
-    "fmt",
-    "nvapi"
+    "fmt"
   ],
   "features": {
     "opengl-cuda-context": {
-      "description": "OpenGL window context using GLEW with CUDA binding using shared textures",
+      "description": "OpenGL window context using GLEW and GLFW with CUDA interop",
       "dependencies": [
-        "cuda",
-        "glew"
+        "glew",
+        "glfw3"
       ]
     }
   }
